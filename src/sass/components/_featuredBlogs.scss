@@ -1,0 +1,56 @@
+.featured {
+  &__container {
+    width: 80%;
+
+    color: white;
+    @include media-query($small) {
+      width: 95%;
+    }
+  }
+
+  &__blogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    @include media-query($medium-down) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__blog {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.75);
+    background-color: #1c2049;
+    color: white;
+    padding: 6rem;
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s ease-in;
+    border-radius: 20px;
+
+    &--title {
+      margin-bottom: 2rem;
+      font-weight: 100;
+      line-height: 2rem;
+    }
+
+    &--excerpt {
+      font-size: 1.3rem;
+    }
+
+    &--date {
+      color: rgb(223, 223, 223);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__header {
+    color: #56e5fe;
+    font-weight: 100;
+    @include media-query($small) {
+      text-align: center;
+    }
+  }
+}

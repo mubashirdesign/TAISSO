@@ -1,0 +1,8 @@
+.terminal {
+  font-size: 1.5rem;
+  @include media-query($medium-down) {
+    width: 100%;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+  }
+}

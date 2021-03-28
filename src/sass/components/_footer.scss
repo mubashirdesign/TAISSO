@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+
+  &__logo {
+    background-color: #1c2049;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 0 20px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  &__copyright {
+    justify-content: center;
+    display: flex;
+    color: white;
+    padding: 3rem;
+  }
+}
