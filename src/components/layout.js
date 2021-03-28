@@ -2,14 +2,15 @@
  * Layout component that queries for data
  * with Gatsby's useStaticQuery component
  *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import * as React from "react"
 import PropTypes from "prop-types"
-import "../sass/main.scss"
 import { useStaticQuery, graphql } from "gatsby"
+
 import Header from "./header"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,15 +18,6 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
-          description
-          author
-        }
-      }
-      file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
         }
       }
     }
@@ -33,16 +25,25 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
-      <footer className="footer">
-        <div className="footer__logo">
-          <img alt="Logo" src={data.file.childImageSharp.fluid.src} />
-        </div>
-        <div className="footer__copyright">
-          © {new Date().getFullYear()}, Mubashir Design Inc
-        </div>
-      </footer>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
+      </div>
     </>
   )
 }
