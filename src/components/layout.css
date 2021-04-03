@@ -5,12 +5,18 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+@font-face {
+  font-family: "Impala";
+  src: local("Impala"),
+    url(../fonts/impalassx-font/impalassx.ttf) format("truetype");
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  color: black;
+  font-family: "Impala";
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -593,5 +599,47 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.torontoIcon {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.impalaIcon {
+  width: 250px;
+  padding-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+.banner__content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner__header {
+  color: black;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .banner__header {
+    font-size: 35px;
   }
 }

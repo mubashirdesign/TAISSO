@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Toronto Area Impala SS Owners`,
+    description: `A webpage for all B-body/Impala/Caprice/Buick owners in the Ontario region`,
+    author: `Mubashir`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
