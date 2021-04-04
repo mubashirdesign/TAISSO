@@ -10,13 +10,18 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="banner__content">
-      <ImpalaIcon />
-      <p className="banner__header">
-        tai<span>SS</span>o
-      </p>
-      <p>Coming SSoon</p>
+      <div className="banner__content--text">
+        <p className="banner__header impala-font">
+          tai<span>SS</span>o
+        </p>
+        <p className="impala-font">
+          Toronto Area <span>Impala SS</span> owners
+        </p>
+      </div>
+      <div className="banner__content--image--container">
+        <StaticImage src="../images/imp.png" />
+      </div>
     </div>
-    <TorontoIcon />
   </Layout>
 )
 
