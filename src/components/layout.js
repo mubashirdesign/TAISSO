@@ -25,17 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <main className="container">{children}</main>
-      </div>
+      <main style={{ width: "100%;" }}>{children}</main>
     </>
   )
 }

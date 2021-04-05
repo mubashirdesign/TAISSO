@@ -15,6 +15,11 @@ html {
   font-family: "Impala";
 }
 
+h1.impala-font,
+h2.impala-font {
+  font-weight: 100;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -609,9 +614,9 @@ pre tt:after {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   height: 100vh;
+  position: relative;
 }
 .torontoIcon {
   width: 100%;
@@ -619,11 +624,16 @@ pre tt:after {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  fill: rgb(92 92 92 / 19%);
 }
 .impalaIcon {
   width: 250px;
   padding-bottom: 2rem;
   margin-left: 1.5rem;
+}
+
+.aboutus__header {
+  margin-top: 1rem;
 }
 
 .banner__content {
@@ -632,6 +642,12 @@ pre tt:after {
   width: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.about__container {
+  width: 100%;
   display: flex;
   align-items: center;
 }
