@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Events", href: "/events/may-14-2022" },
+  { name: "Events", href: "/events" },
   { name: "Contact", href: "/" },
 ];
 
