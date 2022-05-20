@@ -18,6 +18,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import taissoLogoWhite from "../assets/taissologoWhite.png";
+import taissologo from "../assets/taissologo.svg";
 import { Link } from "react-router-dom";
 
 const navigation = [
@@ -28,7 +29,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <Popover as="header" className="relative">
         <div className="bg-gray-900 pt-6">
           <nav
@@ -75,7 +76,7 @@ export default function Header() {
                 href="#"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
               >
-                Contact Us
+                Register
               </a>
             </div>
           </nav>
@@ -97,11 +98,7 @@ export default function Header() {
             <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
-                  />
+                  <img className="h-8 w-auto" src={taissologo} alt="" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
@@ -125,14 +122,13 @@ export default function Header() {
                 <div className="mt-6 px-5">
                   <a
                     href="#"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
+                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-[#d40000] text-white font-medium hover:bg-indigo-700"
                   >
-                    Start free trial
+                    Register
                   </a>
                 </div>
                 <div className="mt-6 px-5">
                   <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{" "}
                     <a href="#" className="text-gray-900 hover:underline">
                       Login
                     </a>

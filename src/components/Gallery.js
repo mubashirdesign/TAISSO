@@ -26,7 +26,7 @@ const files = [
 
 export default function Gallery() {
   return (
-    <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 mx-auto max-w-7xl px-4 lg:px-8">
+    <div className="grid gap-x-4 gap-y-8 grid-cols-1 md:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 mx-auto max-w-7xl px-4 lg:px-8">
       {files.map((file) => (
         <a href={file.href} key={file.source} className="relative">
           <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
