@@ -2,3 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .mailchimpform input {
+    @apply block;
+    @apply w-full;
+    @apply px-4;
+    @apply py-3;
+    @apply rounded-md;
+    @apply border-0;
+    @apply text-base;
+    @apply text-gray-900;
+    @apply placeholder-gray-500;
+    @apply focus:outline-none;
+    @apply focus:ring-2;
+    @apply focus:ring-offset-2;
+    @apply focus:ring-indigo-300;
+    @apply focus:ring-offset-gray-900;
+  }
+
+  .mailchimpform div {
+    @apply flex min-w-0 flex-1;
+  }
+
+  .mailchimpform button {
+    @apply mt-3 sm:mt-0 sm:ml-3 block w-min py-3 px-4 rounded-md shadow bg-[#d40000] text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900;
+  }
+
+  /* ... */
+}
