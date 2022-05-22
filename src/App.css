@@ -20,8 +20,12 @@
     @apply focus:ring-offset-gray-900;
   }
 
-  .mailchimpform div {
-    @apply flex min-w-0 flex-1;
+  .mailchimpform div > div {
+    @apply flex min-w-0 flex-1 relative;
+  }
+
+  .mailchimpform div div > div {
+    @apply absolute top-[90px] block;
   }
 
   .mailchimpform button {

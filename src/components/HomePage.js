@@ -23,7 +23,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const url =
   "//taisso.us12.list-manage.com/subscribe/post?u=f86985d05ab9158faf42e4670&id=b6c7e5527a";
-
+const SimpleForm = () => <MailchimpSubscribe url={url} />;
 export default function HomePage() {
   return (
     <main>
@@ -62,7 +62,28 @@ export default function HomePage() {
                 <div className="mt-10 sm:mt-12">
                   <div className="sm:max-w-xl sm:mx-auto lg:mx-0">
                     <div className="mailchimpform">
-                      <MailchimpSubscribe url={url} />
+                      <MailchimpSubscribe
+                        url={url}
+                        render={({ subscribe, status, message }) => (
+                          <div>
+                            <SimpleForm
+                              onSubmitted={(formData) => subscribe(formData)}
+                            />
+                            {status === "sending" && (
+                              <div style={{ color: "white" }}>sending...</div>
+                            )}
+                            {status === "error" && (
+                              <div style={{ color: "red" }}>
+                                Invalid input, please contact admin if issue
+                                persists!
+                              </div>
+                            )}
+                            {status === "success" && (
+                              <div style={{ color: "green" }}>Subscribed!</div>
+                            )}
+                          </div>
+                        )}
+                      />
                     </div>
                     <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                       Get latest updates on TAI
