@@ -22,7 +22,7 @@ import Location from "./Location";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const url =
-  "//taisso.us12.list-manage.com/subscribe?u=f86985d05ab9158faf42e4670&id=b6c7e5527a";
+  "//taisso.us12.list-manage.com/subscribe/post?u=f86985d05ab9158faf42e4670&id=b6c7e5527a";
 
 export default function HomePage() {
   return (
